@@ -48,10 +48,12 @@ public class Program6 {
 
 		int highCount = radEvents.get(0).getCounts();
 		
-		
+		System.out.println();
+		System.out.println("Date\t\t Counts per minute");
+		System.out.println("----------------------------------");
 		for(RadiationEvent r : radEvents) {
 			if(r.getCounts() >= (highCount - 5)) {
-				System.out.println(r.getCounts() +" "+ r.getEventDate());
+				System.out.println(r.getEventDate() +"\t\t\t"+ r.getCounts());
 			}else {
 				break;
 			}
